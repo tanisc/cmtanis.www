@@ -1,9 +1,3 @@
-/* * FONT IMPORTS 
- * Using Google Fonts for the futuristic typography.
- * Added 'latin-ext' to support special characters.
- */
-@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap&subset=latin-ext');
-
 /* * CSS VARIABLES FOR THEMES
  * This is the core of the theme switcher. We define a set of variables for each theme.
  * JavaScript will change the `data-theme` attribute on the <body> tag,
