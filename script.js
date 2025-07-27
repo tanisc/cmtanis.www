@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // --- DYNAMIC EXPERIENCE YEARS ---
+    const experienceSpan = document.getElementById('experience-years');
+    if (experienceSpan) {
+        const startDate = new Date('2013-06-01');
+        const today = new Date();
+        const diffTime = Math.abs(today - startDate);
+        const diffYears = Math.floor(diffTime / (1000 * 60 * 60 * 24 * 365.25));
+        experienceSpan.textContent = diffYears;
+    }
+
     // --- THEME SWITCHER ---
     const themeSelect = document.getElementById('theme-select');
     // Check for saved theme in localStorage, default to 'orbital'

@@ -9,8 +9,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
-    <!-- Google Fonts Import with latin-ext for Turkish characters -->
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap&subset=latin-ext" rel="stylesheet">
+    <!-- Google Fonts Import -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
     
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="style.css">
@@ -28,6 +28,7 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
+                    <li><a href="#education">Education</a></li>
                     <li><a href="#projects">Projects</a></li>
                     <li><a href="#publications">Publications</a></li>
                     <li><a href="#contact">Contact</a></li>
@@ -58,7 +59,7 @@
         <section id="about">
             <h2 class="section-title">About Me</h2>
             <p>
-                With a background in Electronics Engineering and a Master's in Space Science, my career has been dedicated to the practical application of technology in Earth Observation. For over 11 years at the Finnish Meteorological Institute, I have been at the forefront of developing and maintaining operational services that are critical for monitoring our planet's cryosphere and hydrological systems.
+                With a background in Electronics Engineering and a Master's in Space Science, my career has been dedicated to the practical application of technology in Earth Observation. For over <span id="experience-years">11</span> years at the Finnish Meteorological Institute, I have been at the forefront of developing and maintaining operational services that are critical for monitoring our planet's cryosphere and hydrological systems.
             </p>
             <p>
                 My work involves not just deep technical analysis and algorithm development, but also leading FMI's contributions to major international projects. This experience has cultivated a passion for not only solving technical challenges but also for improving processes and fostering collaboration. I am now looking to channel this experience into a formal management role, where I can focus on building and guiding teams to achieve operational excellence in service delivery.
@@ -70,38 +71,45 @@
             <h2 class="section-title">Skills</h2>
             <div class="skills-grid">
                 <div class="skill-card">
-                    <h3>Technical & Analytical</h3>
+                    <h3>Programming & Data</h3>
                     <ul>
-                        <li>GIS (QGIS, GDAL)</li>
-                        <li>Remote Sensing (SAR, Optical)</li>
-                        <li>Data Analysis & Fusion</li>
-                        <li>Algorithm Development</li>
-                        <li>Quality Assurance</li>
-                        <li>Python</li>
-                        <li>Matlab</li>
+                        <li>Python (Primary language since 2014)</li>
+                        <li>Matlab, C</li>
+                        <li>Data Formats (GeoTIFF, netCDF, BUFR, Shapefile, GeoJSON)</li>
+                        <li>Linux Systems & Shell Scripting</li>
+                        <li>Job Scheduling & Version Control (Git)</li>
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h3>Domain Expertise</h3>
+                    <h3>GIS & Remote Sensing</h3>
                     <ul>
-                        <li>Earth Observation</li>
-                        <li>Operational Service Delivery</li>
-                        <li>Cryosphere Science</li>
-                        <li>Satellite Data Processing</li>
-                        <li>Geospatial Intelligence</li>
-                        <li>NRT Service Monitoring</li>
+                        <li>GIS Software (QGIS, SNAP, Panoply)</li>
+                        <li>Vector & Raster Data Processing</li>
+                        <li>Remote Sensing (SAR, Optical)</li>
+                        <li>3D Graphics (VTK)</li>
+                        <li>Webcam Data Processing</li>
+                        <li>INSPIRE compliant metadata</li>
+                    </ul>
+                </div>
+                <div class="skill-card">
+                    <h3>Web & Cloud</h3>
+                    <ul>
+                        <li>Web Technologies (HTML, CSS, JS, PHP)</li>
+                        <li>Frontend Tools (Bootstrap, Leaflet, Dygraphs)</li>
+                        <li>Mobile Development (FlutterFlow)</li>
+                        <li>Cloud-native (Docker, Object Storage APIs)</li>
+                        <li>HPC (SLURM for parallel processing)</li>
+                        <li>API Integration</li>
                     </ul>
                 </div>
                 <div class="skill-card">
                     <h3>Leadership & Management</h3>
                     <ul>
-                        <li>Project Leadership</li>
-                        <li>Team Coordination</li>
-                        <li>Operational Planning</li>
+                        <li>Project Leadership & Team Coordination</li>
+                        <li>Operational Planning & Process Improvement</li>
                         <li>Performance Monitoring (KPIs)</li>
                         <li>Stakeholder Communication</li>
-                        <li>Resource Allocation</li>
-                        <li>Process Improvement</li>
+                        <li>Project Management Tools (JIRA, MS Office)</li>
                     </ul>
                 </div>
             </div>
@@ -112,7 +120,7 @@
             <h2 class="section-title">Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>Research Engineer</h3>
+                    <h3>Research Engineer, Remote Sensing Expert, Project Lead</h3>
                     <p class="date">Finnish Meteorological Institute (FMI) | June 2013 – Present</p>
                     <ul>
                         <li><strong>Operational Delivery:</strong> Manage FMI's technical delivery for the Copernicus High Resolution Snow & Ice (HRWSI) service. Monitor and report on KPIs for Copernicus SWE and EUMETSAT H-SAF snow products to ensure robust operational quality and consistency.</li>
@@ -121,6 +129,25 @@
                         <li><strong>Technical Innovation:</strong> Develop and enhance data processing capabilities through innovative tools (FMIPROT) and advanced algorithms, directly improving the quality and efficiency of data analysis.</li>
                         <li><strong>Risk Management:</strong> Proactively identify technical risks impacting service delivery and develop robust contingency plans to ensure operational resilience.</li>
                     </ul>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Education Section -->
+        <section id="education">
+            <h2 class="section-title">Education</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>Aalto University</h3>
+                    <p><strong>Master of Science, 2015-2020</strong><br>
+                    MSc. Degree in Electronics and Nanotechnology (Space Science and Technology Major).<br>
+                    Thesis: <em>Operational Monitoring of Snow Cover Using Digital Imagery</em></p>
+                </div>
+                <div class="project-card">
+                    <h3>Istanbul Technical University</h3>
+                    <p><strong>Bachelor of Science, 2008-2013</strong><br>
+                    BSc. and Engineering Degree in Electronics.<br>
+                    Thesis: <em>CMOS Realization of Novel Circuit Elements Proposed for Active Circuit Design</em></p>
                 </div>
             </div>
         </section>
