@@ -216,7 +216,8 @@ a:hover {
     transition: transform 0.2s ease-in-out;
 }
 
-.skill-card:hover {
+.skill-card:hover,
+.project-card:hover {
     transform: translateY(-5px);
 }
 
@@ -308,6 +309,7 @@ a:hover {
     border: 1px solid var(--border-color);
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease-in-out;
 }
 .project-card h3 {
     font-size: 1.2rem;
