@@ -191,10 +191,22 @@ a:hover {
  */
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     margin-top: 40px;
 }
+
+/* 1 column for mobile */
+.skills-grid {
+    grid-template-columns: 1fr;
+}
+
+/* 2x2 grid for desktop */
+@media (min-width: 768px) {
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
 
 .skill-card {
     background-color: var(--bg-secondary-color);
@@ -299,6 +311,9 @@ a:hover {
 }
 .project-card h3 {
     font-size: 1.2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .project-card p {
     flex-grow: 1;
@@ -309,6 +324,27 @@ a:hover {
     color: var(--text-secondary-color);
     font-size: 0.9rem;
 }
+
+.project-tag {
+    font-size: 0.75rem;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-family: var(--mono-font);
+    font-weight: normal;
+}
+
+.tag-current {
+    background-color: var(--accent-color-hover);
+    color: var(--accent-color);
+    border: 1px solid var(--accent-color);
+}
+
+.tag-past {
+    background-color: rgba(136, 146, 176, 0.1);
+    color: var(--text-secondary-color);
+    border: 1px solid var(--text-secondary-color);
+}
+
 
 /* * PUBLICATIONS SECTION
  */
@@ -377,6 +413,16 @@ a:hover {
 #contact p {
     max-width: 600px;
     margin: 20px auto;
+}
+
+.contact-details {
+    margin-top: 30px;
+    font-family: var(--mono-font);
+    color: var(--text-secondary-color);
+}
+
+.contact-details p {
+    margin-bottom: 5px;
 }
 
 /* * FOOTER
