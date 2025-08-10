@@ -9,24 +9,6 @@ document.addEventListener('DOMContentLoaded', function() {
         experienceSpan.textContent = diffYears;
     }
 
-    // --- THEME SWITCHER ---
-    const themeSelect = document.getElementById('theme-select');
-    // Check for saved theme in localStorage, default to 'orbital'
-    const currentTheme = localStorage.getItem('theme') || 'orbital';
-
-    // Apply the saved or default theme on page load
-    document.body.setAttribute('data-theme', currentTheme);
-    themeSelect.value = currentTheme;
-
-    // Add event listener to the dropdown
-    themeSelect.addEventListener('change', (e) => {
-        const selectedTheme = e.target.value;
-        // Apply the selected theme to the body
-        document.body.setAttribute('data-theme', selectedTheme);
-        // Save the user's choice to localStorage
-        localStorage.setItem('theme', selectedTheme);
-    });
-
     // --- MOBILE NAVIGATION ---
     const menuToggle = document.getElementById('menu-toggle');
     const mainNav = document.querySelector('.main-nav');
@@ -63,7 +45,8 @@ document.addEventListener('DOMContentLoaded', function() {
         constructor() {
             this.x = Math.random() * canvas.width;
             this.y = Math.random() * canvas.height;
-            this.size = Math.random() * 2 + 1;
+            // Increased size for more visibility
+            this.size = Math.random() * 3 + 1.5; 
             this.speedX = Math.random() * 1 - 0.5;
             this.speedY = Math.random() * 1 - 0.5;
         }
@@ -77,20 +60,14 @@ document.addEventListener('DOMContentLoaded', function() {
             if (this.size <= 0.2) {
                 this.x = Math.random() * canvas.width;
                 this.y = Math.random() * canvas.height;
-                this.size = Math.random() * 2 + 1;
+                this.size = Math.random() * 3 + 1.5;
                 this.speedX = Math.random() * 1 - 0.5;
                 this.speedY = Math.random() * 1 - 0.5;
             }
         }
         // Draw the particle on the canvas
         draw() {
-            const theme = document.body.getAttribute('data-theme');
-            // Use different colors for the blueprint theme's particles
-            if (theme === 'blueprint') {
-                ctx.fillStyle = 'rgba(49, 130, 206, 0.8)';
-            } else {
-                ctx.fillStyle = 'rgba(100, 255, 218, 0.8)';
-            }
+            ctx.fillStyle = 'rgba(100, 255, 218, 0.8)';
             ctx.beginPath();
             ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
             ctx.fill();

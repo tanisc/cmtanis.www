@@ -1,10 +1,12 @@
-/* * CSS VARIABLES FOR THEMES
- * This is the core of the theme switcher. We define a set of variables for each theme.
- * JavaScript will change the `data-theme` attribute on the <body> tag,
- * which instantly swaps out all the colors, fonts, and other properties.
+/* * FONT IMPORTS 
+ * Using Google Fonts for the futuristic typography.
+ */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Rajdhani:wght@400;700&family=Share+Tech+Mono&family=Inter:wght@300;400;600&display=swap');
+
+/* * CSS VARIABLES
+ * Defines the color palette and fonts for the single "Orbital" theme.
  */
 :root {
-    /* Default Theme: Orbital Command */
     --bg-color: #0a192f;
     --bg-secondary-color: #112240;
     --text-color: #ccd6f6;
@@ -16,35 +18,6 @@
     --body-font: 'Inter', sans-serif;
     --mono-font: 'Share Tech Mono', monospace;
     --bg-animation-opacity: 0.2;
-}
-
-[data-theme="glitch"] {
-    --bg-color: #000000;
-    --bg-secondary-color: #1a1a1a;
-    --text-color: #e6e6e6;
-    --text-secondary-color: #a8a8a8;
-    --accent-color: #f72585;
-    --accent-color-hover: rgba(247, 37, 133, 0.1);
-    --border-color: #333;
-    --header-font: 'Rajdhani', sans-serif;
-    --body-font: 'Inter', sans-serif;
-    --mono-font: 'Share Tech Mono', monospace;
-    --bg-animation-opacity: 0.1;
-}
-
-[data-theme="blueprint"] {
-    /* This is now a dark theme */
-    --bg-color: #0b1d32;
-    --bg-secondary-color: #112a45;
-    --text-color: #e2e8f0;
-    --text-secondary-color: #8892b0;
-    --accent-color: #3182ce;
-    --accent-color-hover: rgba(49, 130, 206, 0.1);
-    --border-color: #234567;
-    --header-font: 'Share Tech Mono', monospace;
-    --body-font: 'Inter', sans-serif;
-    --mono-font: 'Share Tech Mono', monospace;
-    --bg-animation-opacity: 0.3;
 }
 
 /* * BASE STYLES & RESET
@@ -136,7 +109,7 @@ a:hover {
     top: 0;
     width: 100%;
     padding: 15px 0;
-    background-color: rgba(10, 25, 47, 0.85); /* From orbital theme, for consistency */
+    background-color: rgba(10, 25, 47, 0.85);
     backdrop-filter: blur(10px);
     z-index: 10;
     border-bottom: 1px solid var(--border-color);
@@ -167,17 +140,6 @@ a:hover {
 .main-nav a {
     font-family: var(--mono-font);
     color: var(--text-color);
-}
-
-/* Theme Switcher */
-.theme-switcher select {
-    background-color: var(--bg-secondary-color);
-    color: var(--text-color);
-    border: 1px solid var(--border-color);
-    padding: 5px 10px;
-    border-radius: 4px;
-    font-family: var(--mono-font);
-    cursor: pointer;
 }
 
 /* Mobile Nav */
@@ -319,7 +281,7 @@ a:hover {
     left: 0;
 }
 
-/* * PROJECTS SECTION
+/* * PROJECTS & PRODUCTS SECTION
  */
 .projects-grid {
     display: grid;
@@ -407,14 +369,6 @@ a:hover {
     margin-bottom: 0;
 }
 
-.publication-divider {
-    border: 0;
-    height: 1px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), var(--border-color), rgba(0, 0, 0, 0));
-    margin: 30px 0;
-}
-
-
 /* * CONTACT SECTION
  */
 #contact {
@@ -433,54 +387,6 @@ footer {
     font-family: var(--mono-font);
     color: var(--text-secondary-color);
 }
-
-/*
- * THEME-SPECIFIC ANIMATIONS & STYLES
- */
-
-/* Glitch Theme Specifics */
-[data-theme="glitch"] #hero h1 {
-    animation: glitch 1s linear infinite;
-}
-
-@keyframes glitch {
-    2%, 64% { transform: translate(2px, 0) skew(0deg); }
-    4%, 60% { transform: translate(-2px, 0) skew(0deg); }
-    62% { transform: translate(0, 0) skew(5deg); }
-}
-
-[data-theme="glitch"] .skill-card,
-[data-theme="glitch"] .project-card,
-[data-theme="glitch"] .publication-item {
-    border-image: linear-gradient(to right, var(--accent-color), #4cc9f0) 1;
-    border-left-width: 4px;
-    border-right-width: 1px;
-    border-top-width: 1px;
-    border-bottom-width: 1px;
-}
-
-/* Blueprint Theme Specifics */
-[data-theme="blueprint"] h2.section-title::after {
-    content: '';
-    position: absolute;
-    bottom: -5px;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: linear-gradient(to right, var(--accent-color) 50%, transparent 50%);
-    background-size: 10px 2px;
-}
-
-[data-theme="blueprint"] .skill-card,
-[data-theme="blueprint"] .project-card {
-    box-shadow: 5px 5px 0px var(--border-color);
-}
-
-[data-theme="blueprint"] .publication-item {
-    border: 1px solid var(--border-color);
-    border-left: 4px solid var(--accent-color);
-}
-
 
 /* * RESPONSIVENESS
  */

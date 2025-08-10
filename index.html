@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cemal Melih Tanis | Research Engineer</title>
+    <title>Cemal Melih Tanis | Geospatial Engineer</title>
     
     <!-- Google Fonts Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
     <!-- Link to the external CSS file -->
     <link rel="stylesheet" href="style.css">
 </head>
-<body data-theme="orbital">
+<body>
     <!-- Canvas for background animations -->
     <canvas id="bg-canvas"></canvas>
 
@@ -28,17 +28,10 @@
                     <li><a href="#about">About</a></li>
                     <li><a href="#skills">Skills</a></li>
                     <li><a href="#experience">Experience</a></li>
-                    <li><a href="#education">Education</a></li>
                     <li><a href="#projects">Projects</a></li>
+                    <li><a href="#products">Products & Platforms</a></li>
                     <li><a href="#publications">Publications</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li class="theme-switcher">
-                        <select id="theme-select">
-                            <option value="orbital">Theme: Orbital</option>
-                            <option value="glitch">Theme: Glitch</option>
-                            <option value="blueprint">Theme: Blueprint</option>
-                        </select>
-                    </li>
                 </ul>
             </nav>
             <div class="menu-toggle" id="menu-toggle">&equiv;</div>
@@ -51,7 +44,7 @@
             <p style="font-family: var(--mono-font); color: var(--accent-color);">Hi, my name is</p>
             <h1>Cemal Melih Tanis.</h1>
             <h2 class="subtitle">I build and manage Earth Observation services.</h2>
-            <p>I'm a Research Engineer based in Finland with over a decade of experience specializing in remote sensing, GIS, and the delivery of operational data services that turn complex satellite data into reliable, actionable information.</p>
+            <p>I'm a Geospatial Engineer based in Finland with over a decade of experience specializing in remote sensing, GIS, and the delivery of operational data services that turn complex satellite data into reliable, actionable information.</p>
             <a href="#contact" class="cta-button">Get In Touch</a>
         </section>
 
@@ -75,31 +68,30 @@
                     <ul>
                         <li>Python (Primary language since 2014)</li>
                         <li>Matlab, C</li>
-                        <li>Data Formats (GeoTIFF, netCDF, BUFR, Shapefile, GeoJSON)</li>
-                        <li>Linux Systems & Shell Scripting</li>
-                        <li>Job Scheduling & Version Control (Git)</li>
+                        <li>Geospatial Data Formats (GeoTIFF, netCDF, BUFR, Shapefile, GeoJSON)</li>
+                        <li>Linux Systems, NRT Processing, HPC (SLURM)</li>
+                        <li>API Integration</li>
+                        <li>Version Control (Git)</li>
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h3>GIS & Remote Sensing</h3>
+                    <h3>Remote Sensing & GIS</h3>
                     <ul>
+                        <li>Satellite and Webcam Data</li>
+                        <li>Optical, Multispectral and SAR</li>
                         <li>GIS Software (QGIS, SNAP, Panoply)</li>
                         <li>Vector & Raster Data Processing</li>
-                        <li>Remote Sensing (SAR, Optical)</li>
-                        <li>3D Graphics (VTK)</li>
-                        <li>Webcam Data Processing</li>
                         <li>INSPIRE compliant metadata</li>
+                        <li>Research</li>
                     </ul>
                 </div>
                 <div class="skill-card">
-                    <h3>Web & Cloud</h3>
+                    <h3>Web, Cloud & Mobile</h3>
                     <ul>
-                        <li>Web Technologies (HTML, CSS, JS, PHP)</li>
+                        <li>Web Technologies (HTML, CSS, JS, PHP, FlutterFlow)</li>
                         <li>Frontend Tools (Bootstrap, Leaflet, Dygraphs)</li>
-                        <li>Mobile Development (FlutterFlow)</li>
                         <li>Cloud-native (Docker, Object Storage APIs)</li>
-                        <li>HPC (SLURM for parallel processing)</li>
-                        <li>API Integration</li>
+                        <li>Mobile Development (FlutterFlow)</li>
                     </ul>
                 </div>
                 <div class="skill-card">
@@ -109,7 +101,7 @@
                         <li>Operational Planning & Process Improvement</li>
                         <li>Performance Monitoring (KPIs)</li>
                         <li>Stakeholder Communication</li>
-                        <li>Project Management Tools (JIRA, MS Office)</li>
+                        <li>Project Management Tools (JIRA, MS Planner)</li>
                     </ul>
                 </div>
             </div>
@@ -120,7 +112,7 @@
             <h2 class="section-title">Experience</h2>
             <div class="timeline">
                 <div class="timeline-item">
-                    <h3>Research Engineer, Remote Sensing Expert, Project Lead</h3>
+                    <h3>Research Engineer, Product Owner, Project Lead</h3>
                     <p class="date">Finnish Meteorological Institute (FMI) | June 2013 – Present</p>
                     <ul>
                         <li><strong>Operational Delivery:</strong> Manage FMI's technical delivery for the Copernicus High Resolution Snow & Ice (HRWSI) service. Monitor and report on KPIs for Copernicus SWE and EUMETSAT H-SAF snow products to ensure robust operational quality and consistency.</li>
@@ -142,103 +134,95 @@
             </div>
         </section>
         
-        <!-- Education Section -->
-        <section id="education">
-            <h2 class="section-title">Education</h2>
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2 class="section-title">Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>Aalto University</h3>
-                    <p><strong>Master of Science, 2015-2020</strong><br>
-                    MSc. Degree in Electronics and Nanotechnology (Space Science and Technology Major).<br>
-                    Thesis: <em>Operational Monitoring of Snow Cover Using Digital Imagery</em></p>
+                    <h3>CLMS HRSI & HRWSI</h3>
+                    <p>Pan-European High Resolution Snow and Ice Monitoring service, part of the Copernicus Land Monitoring Service.</p>
+                    <div class="tech-stack">Role: Technical Lead (FMI)</div>
+                    <div class="tech-stack">Funded by: EEA</div>
                 </div>
                 <div class="project-card">
-                    <h3>Istanbul Technical University</h3>
-                    <p><strong>Bachelor of Science, 2008-2013</strong><br>
-                    BSc. and Engineering Degree in Electronics.<br>
-                    Thesis: <em>CMOS Realization of Novel Circuit Elements Proposed for Active Circuit Design</em></p>
+                    <h3>QA4EO IDEAS(+) & QA4EO-2</h3>
+                    <p>Established a quality assurance framework for EO data, leading to the creation of the FMIPROT and FMI ARK SAT QA Portal platforms.</p>
+                    <div class="tech-stack">Role: Project Manager (FMI)</div>
+                    <div class="tech-stack">Funded by: ESA</div>
+                </div>
+                <div class="project-card">
+                    <h3>MONIMET</h3>
+                    <p>Studied vegetation/snow phenology from webcam imagery and managed data repositories. First created FMIPROT in this project.</p>
+                    <div class="tech-stack">Role: Researcher</div>
+                    <div class="tech-stack">Funded by: EC Life+</div>
+                </div>
+                <div class="project-card">
+                    <h3>H-SAF</h3>
+                    <p>Maintained operational algorithms for crucial hydrological products, including snow cover and snow water equivalent.</p>
+                    <div class="tech-stack">Role: Algorithm Maintainer</div>
+                    <div class="tech-stack">Funded by: EUMETSAT</div>
+                </div>
+                <div class="project-card">
+                    <h3>BalticSatApps</h3>
+                    <p>Involved in capacity building, organising and mentoring in hackathons to steer startups and SMEs to use satellite data.</p>
+                    <div class="tech-stack">Role: Mentor & Organiser</div>
+                    <div class="tech-stack">Funded by: Interreg Baltic Sea Region</div>
+                </div>
+                <div class="project-card">
+                    <h3>Harmosnow</h3>
+                    <p>A European network for a harmonised monitoring of snow for the benefit of climate change scenarios, hydrology and NWP.</p>
+                    <div class="tech-stack">Role: Network Member</div>
+                    <div class="tech-stack">Funded by: COST</div>
+                </div>
+                <div class="project-card">
+                    <h3>Globsnow</h3>
+                    <p>Involved in the production and validation of hemispheric snow information services for climate research.</p>
+                    <div class="tech-stack">Role: Research Scientist</div>
+                    <div class="tech-stack">Funded by: ESA</div>
+                </div>
+                <div class="project-card">
+                    <h3>ERA4CS INDECIS</h3>
+                    <p>Studied climate indicators for high-priority sectors such as agriculture, disaster risk reduction, energy, and health.</p>
+                    <div class="tech-stack">Role: Researcher</div>
+                    <div class="tech-stack">Funded by: EC</div>
+                </div>
+                 <div class="project-card">
+                    <h3>Core-Climax</h3>
+                    <p>Coordinated Earth observation data validation for re-analysis, focusing on snow as an Essential Climate Variable.</p>
+                    <div class="tech-stack">Role: Researcher</div>
+                    <div class="tech-stack">Funded by: EC FP7</div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section id="projects">
-            <h2 class="section-title">Projects & Platforms</h2>
+        <!-- Products & Platforms Section -->
+        <section id="products">
+            <h2 class="section-title">Products & Platforms</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <h3>FMIPROT & Camera Portal</h3>
-                    <p>A software toolbox and portal for processing image series from camera networks. I manage, develop, and run all components of this platform.</p>
-                    <div class="tech-stack">Role: Platform Manager & Lead Developer</div>
+                    <h3>CLMS HRSI & HRWSI Products</h3>
+                    <p>Product Owner for key operational services including Gap-Filled Snow Cover Fraction, Snow Phenology (S1+S2), Ice Cover Duration, and Water/Ice Cover (S1).</p>
+                    <div class="tech-stack">Programme: Copernicus Land Monitoring Service</div>
+                </div>
+                <div class="project-card">
+                    <h3>EUMETSAT H-SAF H11</h3>
+                    <p>Served as Product Owner for the H11 snow status product, which utilised passive microwave data from the SSMIS instrument.</p>
+                    <div class="tech-stack">Programme: EUMETSAT H-SAF</div>
+                </div>
+                <div class="project-card">
+                    <h3>Kemijoki HOPS Webapp</h3>
+                    <p>Owned the development of the user-facing B2B web application for a major hydropower client, translating complex hydrological model data into an intuitive visualisation tool.</p>
+                    <div class="tech-stack">Client: Kemijoki Oy</div>
+                </div>
+                <div class="project-card">
+                    <h3>FMIPROT & Camera Network Portal</h3>
+                    <p>A SaaS platform for NRT processing of camera images from multiple networks, providing output data via the FMIPROT API.</p>
+                    <div class="tech-stack">Platform: Web Service</div>
                 </div>
                 <div class="project-card">
                     <h3>FMI ARK SAT QA Portal</h3>
-                    <p>An automated system for the quality assessment of satellite-derived snow products, comparing them against in-situ and webcam data.</p>
-                    <div class="tech-stack">Role: Platform Manager & Lead Developer</div>
-                </div>
-                <div class="project-card">
-                    <h3>Kemijoki HOPS</h3>
-                    <p>Developed and implemented the frontend of a web-based hydrological forecast system for the Kemijoki hydropower company.</p>
-                    <div class="tech-stack">Role: Frontend Developer</div>
-                </div>
-                <div class="project-card">
-                    <h3>EEA HRSI Monitoring</h3>
-                    <p>Pan-European High Resolution Snow and Ice Monitoring service, part of the Copernicus Land Monitoring Service.</p>
-                    <div class="tech-stack">Role: Technical Lead (FMI)</div>
-                </div>
-                <div class="project-card">
-                    <h3>Copernicus Global Land</h3>
-                    <p>Contributed to the development and delivery of global land monitoring products, focusing on cryospheric variables.</p>
-                    <div class="tech-stack">Role: Research Scientist</div>
-                </div>
-                <div class="project-card">
-                    <h3>EUMETSAT H-SAF</h3>
-                    <p>Developed, maintained, and validated operational algorithms for crucial hydrological products, including snow cover and snow water equivalent.</p>
-                    <div class="tech-stack">Role: Algorithm Developer</div>
-                </div>
-                <div class="project-card">
-                    <h3>ESA: Snow CCI</h3>
-                    <p>Contributed to the development of long-term, consistent snow cover climate data records as part of the ESA's Climate Change Initiative.</p>
-                    <div class="tech-stack">Role: Research Scientist</div>
-                </div>
-                <div class="project-card">
-                    <h3>ESA: Globsnow</h3>
-                    <p>Involved in the production and validation of hemispheric snow information services, contributing to a long-term global dataset for climate research.</p>
-                    <div class="tech-stack">Role: Research Scientist</div>
-                </div>
-                <div class="project-card">
-                    <h3>SEN3APP</h3>
-                    <p>Developed processing lines and operational services combining Sentinel and in-situ data for terrestrial cryosphere and boreal forest zones.</p>
-                    <div class="tech-stack">Role: Research Contributor</div>
-                </div>
-                <div class="project-card">
-                    <h3>Life+ MONIMET</h3>
-                    <p>Applied innovative observation and modeling techniques for climate change indicators and vulnerability in the Boreal Zone.</p>
-                    <div class="tech-stack">Role: Research Contributor</div>
-                </div>
-                <div class="project-card">
-                    <h3>ESSEM COST Action</h3>
-                    <p>Participated in a European network for harmonizing snow monitoring for climate change scenarios, hydrology, and NWP.</p>
-                    <div class="tech-stack">Role: Action Member</div>
-                </div>
-                 <div class="project-card">
-                    <h3>Core-Climax</h3>
-                    <p>Coordinated Earth observation data validation for re-analysis for climate services.</p>
-                    <div class="tech-stack">Role: Research Contributor</div>
-                </div>
-                <div class="project-card">
-                    <h3>ERA4CS INDECIS</h3>
-                    <p>Developed user-oriented climate indicators for high-priority sectors like agriculture, disaster risk reduction, and energy.</p>
-                    <div class="tech-stack">Role: Research Contributor</div>
-                </div>
-                <div class="project-card">
-                    <h3>BalticSatApps</h3>
-                    <p>Contributed to an initiative for speeding up Copernicus-based innovation in the Baltic Sea region.</p>
-                    <div class="tech-stack">Role: Technical Expert</div>
-                </div>
-                 <div class="project-card">
-                    <h3>FMI HAV: LUMIKE</h3>
-                    <p>Participated in a project focused on developing snow-related services and products.</p>
-                    <div class="tech-stack">Role: Research Scientist</div>
+                    <p>Owned and developed an automated SaaS platform for the quality assessment of satellite-derived snow products, utilising the FMIPROT API.</p>
+                    <div class="tech-stack">Platform: Web Service</div>
                 </div>
             </div>
         </section>
@@ -329,13 +313,16 @@
             <h2 class="section-title">Get In Touch</h2>
             <p>I'm currently seeking new opportunities and my inbox is always open. Whether you have a question or just want to say hi, I'll do my best to get back to you!</p>
             <a href="mailto:cmtanis@gmail.com" class="cta-button">Say Hello</a>
+            <div class="contact-details">
+                <p>cmtanis@gmail.com</p>
+                <p>+358 50 505 8547</p>
+            </div>
         </section>
     </main>
 
     <!-- Footer -->
     <footer>
         <p>Designed & Built by Cemal Melih Tanis & Gemini</p>
-        <p>Contact: cmtanis@gmail.com | +358 50 505 8547</p>
     </footer>
 
     <!-- Link to the external JavaScript file -->
