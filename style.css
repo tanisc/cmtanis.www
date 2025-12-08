@@ -28,8 +28,11 @@
     box-sizing: border-box;
 }
 
+/* Update this block in style.css */
 html {
     scroll-behavior: smooth;
+    /* ADD THIS LINE: offsets the scroll anchor so the header doesn't cover text */
+    scroll-padding-top: 100px; 
 }
 
 body {
@@ -624,4 +627,5 @@ footer {
         content: "";
     }
 }
+
 
