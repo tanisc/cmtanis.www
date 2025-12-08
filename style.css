@@ -470,3 +470,158 @@ footer {
         margin: 20px 0;
     }
 }
+
+/* * PRINT STYLES (CV MODE)
+ * These rules only apply when printing or saving as PDF.
+ * It transforms the site from "Dark Mode Web" to "Clean White Paper".
+ */
+@media print {
+    /* 1. Global Color Reset */
+    :root {
+        --bg-color: #ffffff;
+        --bg-secondary-color: #ffffff;
+        --text-color: #000000;
+        --text-secondary-color: #333333;
+        --accent-color: #000000; /* Darken accent for readability */
+        --border-color: #dddddd;
+    }
+
+    /* 2. Hide Non-Essential Elements */
+    #bg-canvas,           /* No animations */
+    .main-nav,            /* No navigation menu */
+    .menu-toggle,         /* No hamburger icon */
+    .cta-button,          /* No "Get In Touch" buttons */
+    .publication-links,   /* Hide visual buttons for links */
+    footer {              /* Hide "Built by..." footer */
+        display: none !important;
+    }
+
+    /* 3. Layout Adjustments */
+    body {
+        background-color: white;
+        color: black;
+        font-family: 'Inter', sans-serif; /* Serif reads better on paper, but Inter is fine */
+        font-size: 11pt; /* Standard print size */
+    }
+
+    .container {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    section {
+        padding: 20px 0; /* Reduce vertical spacing */
+        page-break-inside: avoid; /* Try not to split sections across pages */
+        border-bottom: 1px solid #eee;
+    }
+
+    /* 4. Specific Section Tweaks */
+    
+    /* Header: Simplified for print */
+    .main-header {
+        position: relative; /* Unstick from top */
+        border-bottom: 2px solid #000;
+        padding: 10px 0;
+        background: none;
+    }
+    
+    .logo {
+        color: black;
+        font-size: 20pt;
+    }
+
+    /* Hero: Reduce massive text */
+    #hero {
+        min-height: auto; /* Remove full viewport height */
+        padding-top: 0;
+        margin-bottom: 20px;
+    }
+    
+    #hero h1 {
+        font-size: 28pt;
+        color: black;
+        margin-bottom: 5px;
+    }
+    
+    #hero .subtitle {
+        font-size: 16pt;
+        color: #444;
+        margin-bottom: 15px;
+    }
+
+    /* Skills Grid: Make it compact */
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr); /* Force 2 columns */
+        gap: 15px;
+        page-break-inside: avoid;
+    }
+
+    .skill-card {
+        border: 1px solid #ccc;
+        box-shadow: none;
+        padding: 10px;
+        break-inside: avoid;
+    }
+
+    /* Experience & Projects: Clean lists */
+    .project-card, 
+    .publication-item {
+        border: none;
+        padding: 0;
+        margin-bottom: 15px;
+        box-shadow: none;
+        background: transparent;
+    }
+
+    .project-tag {
+        border: 1px solid #666;
+        color: #000;
+        background: transparent !important;
+    }
+
+    /* Contact: Make sure email/phone is visible */
+    #contact {
+        text-align: left;
+        padding-top: 10px;
+    }
+    
+    .contact-details {
+        display: block;
+        color: black;
+        font-weight: bold;
+    }
+
+    /* 5. Typography */
+    h2.section-title {
+        font-size: 18pt;
+        color: black;
+        border-bottom: 1px solid #000;
+        display: block;
+        width: 100%;
+    }
+    
+    h2.section-title::before {
+        display: none; /* Remove the ">" decoration */
+    }
+
+    a {
+        text-decoration: none;
+        color: #000;
+    }
+    
+    /* Show URL after links so people can read them on paper */
+    a[href^="http"]::after {
+        content: " (" attr(href) ")";
+        font-size: 0.8em;
+        color: #555;
+    }
+    
+    /* Don't show URL for internal links or the main logo */
+    a[href^="#"]::after,
+    .logo::after {
+        content: "";
+    }
+}
+
