@@ -1,1 +1,306 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Rent: 2-Room Apartment, Kivimäki (Martinlaakso), Vantaa</title>
+<style>
+  body {
+    font-family: sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  .container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .lang-switch {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  .lang-switch a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    padding: 5px;
+  }
+  .lang-switch a.active {
+    border-bottom: 2px solid #333;
+  }
+  h1, h2 {
+    color: #333;
+  }
+  .details {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+  .details p {
+    margin: 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  .gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 10px;
+  }
+  .gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    cursor: pointer;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    transition: transform 0.2s;
+  }
+  .gallery img:hover {
+      transform: scale(1.05);
+  }
+  .photo-note {
+      font-size: 0.9em;
+      font-style: italic;
+      color: #555;
+      margin-top: -10px;
+      margin-bottom: 20px;
+  }
 
+  /* Modal (Lightbox) Styles */
+  .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
+    padding-top: 50px; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgba(0,0,0,0.9);
+  }
+  .modal-content {
+    margin: auto;
+    display: block;
+    max-width: 85%;
+    max-height: 85%;
+  }
+  .close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+  }
+  .close:hover,
+  .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div class="lang-switch">
+    <a href="#" id="lang-fi" class="active" onclick="switchLang('fi'); return false;">FI</a> |
+    <a href="#" id="lang-en" onclick="switchLang('en'); return false;">EN</a>
+  </div>
+
+  <div id="content-fi">
+    <h1>Vuokrattavana: Tilava kaksio - Kivimäki (Martinlaakso)</h1>
+    
+    <h2>Kuvat</h2>
+    <p class="photo-note">Huom: Kuvat on otettu 3 vuotta sitten, mutta asunto on edelleen vastaavassa kunnossa.</p>
+    <div class="gallery">
+      <img src="forrent/keittio-1.jpg" alt="Kuva keittiöstä">
+      <img src="forrent/keittio-3.jpg" alt="Kuva keittiöstä">
+      <img src="forrent/keittio-extra.jpg" alt="Kuva keittiöstä">
+      <img src="forrent/keittio-extra-hr.jpg" alt="Kuva keittiöstä">
+      <img src="forrent/keittio-hr.jpg" alt="Kuva keittiöstä">
+      <img src="forrent/kylpyhuone-1-hr.jpg" alt="Kuva kylpyhuoneesta">
+      <img src="forrent/kylpyhuone.jpg" alt="Kuva kylpyhuoneesta">
+      <img src="forrent/kylpyhuone-hr.jpg" alt="Kuva kylpyhuoneesta">
+      <img src="forrent/makuuhuone-extra-3-hr.jpg" alt="Kuva makuuhuoneesta">
+      <img src="forrent/makuuhuone-extra-hr.jpg" alt="Kuva makuuhuoneesta">
+      <img src="forrent/makuuhuone.jpg" alt="Kuva makuuhuoneesta">
+      <img src="forrent/nakoala-extra.jpg" alt="Kuva näköalasta">
+      <img src="forrent/nakoala-hr.jpg" alt="Kuva näköalasta">
+      <img src="forrent/pohjapiirustus.jpg" alt="Pohjapiirustus">
+      <img src="forrent/olohuone-1.jpg" alt="Kuva olohuoneesta">
+      <img src="forrent/olohuone-2.jpg" alt="Kuva olohuoneesta">
+      <img src="forrent/olohuone-2-hr.jpg" alt="Kuva olohuoneesta">
+      <img src="forrent/olohuone-hr.jpg" alt="Kuva olohuoneesta">
+      <img src="forrent/parveke-1-hr.jpg" alt="Kuva parvekkeelta">
+      <img src="forrent/parveke-extra.jpg" alt="Kuva parvekkeelta">
+      <img src="forrent/parveke-hr.jpg" alt="Kuva parvekkeelta">
+    </div>
+
+    <h2>Perustiedot</h2>
+    <div class="details">
+      <p><strong>Vuokra:</strong> 850 € / kk</p>
+      <p><strong>Pinta-ala:</strong> 56 m²</p>
+      <p><strong>Huoneet:</strong> 2h + k + lasitettu parveke</p>
+      <p><strong>Sijainti:</strong> Lintukallionrinne 3, 01620 Vantaa</p>
+      <p><strong>Kerros:</strong> 6 / 6</p>
+      <p><strong>Vapautuu:</strong> 30.9.2025</p>
+    </div>
+
+    <h2>Kuvaus</h2>
+    <p>
+      Valoisa ja tilava läpitalon kaksio Vantaan Kivimäessä (Martinlaakso). Itä-länsisuuntaisten ikkunoiden ansiosta asunto on valoisa koko päivän. Asunnossa on avara keittiö ja länteen avautuva lasitettu parveke. Taloyhtiössä on tehty 3 vuotta sitten putkiremontti, jonka yhteydessä uusittiin myös sähkö- ja internet-johdotukset. Martinlaakson juna-asemalle (P- ja I-junat lentoasemalle) on vain 700 metrin matka. Alueella on hyvät pysäköintimahdollisuudet, ja koulu sekä päiväkoti sijaitsevat aivan vieressä.
+    </p>
+
+    <h2>Varustelu</h2>
+    <div class="details">
+      <p><strong>Keittiö:</strong> Jääkaappi, pakastin, uuni, liesi, astianpesukone</p>
+      <p><strong>Kylpyhuone:</strong> Suihku, WC, pyykinpesutupa</p>
+      <p><strong>Säilytys:</strong> Pyörävarasto, häkkivarasto</p>
+      <p><strong>Internet:</strong> Saatavilla nopea DNA Valokuitu</p>
+      <p><strong>Muuta:</strong> Hissi, lemmikit sallittu, tupakointi kielletty</p>
+      <p><strong>Vesimaksu:</strong> 22 € / hlö / kk</p>
+      <p><strong>Sauna:</strong> Yleisössä sauna, 1 h viikossa (maksullinen) + yhteiset aukioloajat</p>
+    </div>
+
+    <h2>Yhteystiedot</h2>
+    <p>
+      Cemal Tanis<br>
+      Puh: 050 505 8547 (vain englanniksi, suomenkielinen yhteyshenkilö lisätään myöhemmin)<br>
+      Sähköposti: cmtanis@gmail.com (englanniksi ja suomeksi)
+    </p>
+
+  </div>
+
+  <div id="content-en" style="display:none;">
+    <h1>For Rent: Spacious 2-Room Apartment in Kivimäki (Martinlaakso)</h1>
+    
+    <h2>Photos</h2>
+    <p class="photo-note">Note: Photos were taken 3 years ago, but the apartment remains in a similar condition.</p>
+    <div class="gallery">
+        <img src="forrent/keittio-1.jpg" alt="Kitchen photo">
+        <img src="forrent/keittio-3.jpg" alt="Kitchen photo">
+        <img src="forrent/keittio-extra.jpg" alt="Kitchen photo">
+        <img src="forrent/keittio-extra-hr.jpg" alt="Kitchen photo">
+        <img src="forrent/keittio-hr.jpg" alt="Kitchen photo">
+        <img src="forrent/kylpyhuone-1-hr.jpg" alt="Bathroom photo">
+        <img src="forrent/kylpyhuone.jpg" alt="Bathroom photo">
+        <img src="forrent/kylpyhuone-hr.jpg" alt="Bathroom photo">
+        <img src="forrent/makuuhuone-extra-3-hr.jpg" alt="Bedroom photo">
+        <img src="forrent/makuuhuone-extra-hr.jpg" alt="Bedroom photo">
+        <img src="forrent/makuuhuone.jpg" alt="Bedroom photo">
+        <img src="forrent/nakoala-extra.jpg" alt="View photo">
+        <img src="forrent/nakoala-hr.jpg" alt="View photo">
+        <img src="forrent/pohjapiirustus.jpg" alt="Floor plan">
+        <img src="forrent/olohuone-1.jpg" alt="Living room photo">
+        <img src="forrent/olohuone-2.jpg" alt="Living room photo">
+        <img src="forrent/olohuone-2-hr.jpg" alt="Living room photo">
+        <img src="forrent/olohuone-hr.jpg" alt="Living room photo">
+        <img src="forrent/parveke-1-hr.jpg" alt="Balcony photo">
+        <img src="forrent/parveke-extra.jpg" alt="Balcony photo">
+        <img src="forrent/parveke-hr.jpg" alt="Balcony photo">
+    </div>
+
+    <h2>Basic Information</h2>
+    <div class="details">
+      <p><strong>Rent:</strong> 850 € / month</p>
+      <p><strong>Area:</strong> 56 m²</p>
+      <p><strong>Rooms:</strong> 2 rooms + kitchen + glazed balcony</p>
+      <p><strong>Location:</strong> Lintukallionrinne 3, 01620 Vantaa</p>
+      <p><strong>Floor:</strong> 6 / 6</p>
+      <p><strong>Available:</strong> 30 September 2025</p>
+    </div>
+
+    <h2>Description</h2>
+    <p>
+      A bright and spacious apartment in Kivimäki (Martinlaakso), Vantaa. With windows facing both east and west, the apartment is filled with natural light all day long. It features a roomy kitchen and a glazed balcony facing west. The building underwent a full renovation 3 years ago (plumbing, electrical, and internet wiring). It is only 700m to the Martinlaakso train station (P and I trains to the airport). The area has good parking facilities, and a school and kindergarten are located right next door.
+    </p>
+
+    <h2>Amenities</h2>
+    <div class="details">
+      <p><strong>Kitchen:</strong> Refrigerator, freezer, oven, stove, dishwasher</p>
+      <p><strong>Bathroom:</strong> Shower, toilet, laundry room</p>
+      <p><strong>Storage:</strong> Bicycle storage, basement storage</p>
+      <p><strong>Internet:</strong> High-speed DNA Fiber connection available</p>
+      <p><strong>Other:</strong> Elevator, pets allowed, no smoking</p>
+      <p><strong>Water fee:</strong> 22 € / person / month</p>
+      <p><strong>Sauna:</strong> Public one available, 1h per week (with fee) + common hours</p>
+    </div>
+
+    <h2>Contact Information</h2>
+    <p>
+      Cemal Tanis<br>
+      Phone: 050 505 8547 (English speaking only, a Finnish speaking contact will be added later)<br>
+      Email: cmtanis@gmail.com (English and Finnish)
+    </p>
+
+  </div>
+
+</div>
+
+<!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="modalImg">
+</div>
+
+
+<script>
+  // Language switcher logic
+  function switchLang(lang) {
+    if (lang === 'en') {
+      document.getElementById('content-fi').style.display = 'none';
+      document.getElementById('content-en').style.display = 'block';
+      document.getElementById('lang-en').classList.add('active');
+      document.getElementById('lang-fi').classList.remove('active');
+      document.documentElement.lang = 'en';
+    } else {
+      document.getElementById('content-en').style.display = 'none';
+      document.getElementById('content-fi').style.display = 'block';
+      document.getElementById('lang-fi').classList.add('active');
+      document.getElementById('lang-en').classList.remove('active');
+      document.documentElement.lang = 'fi';
+    }
+  }
+
+  // Modal/Lightbox logic
+  // Get the modal
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("modalImg");
+
+  // Get all images and loop through them
+  var images = document.querySelectorAll(".gallery img");
+  images.forEach(function(img) {
+    img.onclick = function() {
+      modal.style.display = "block";
+      modalImg.src = this.src;
+    }
+  });
+
+  // Get the <span> element that closes the modal
+  var span = document.getElementsByClassName("close")[0];
+
+  // When the user clicks on <span> (x), close the modal
+  span.onclick = function() {
+    modal.style.display = "none";
+  }
+
+  // Also close the modal when clicking on the background
+  modal.onclick = function(event) {
+    if (event.target == modal) {
+      modal.style.display = "none";
+    }
+  }
+</script>
+
+</body>
+</html>
